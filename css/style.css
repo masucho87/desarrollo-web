@@ -1,3 +1,5 @@
+/*---Variables*/
+/*--Importaciones de estilos-*/
 html body {
   margin: 0;
   padding: 0;
@@ -16,75 +18,51 @@ body {
   background-attachment: fixed;
 }
 
-.wrapper {
+.container .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
 }
-
-.content {
-  color: black;
-  text-align: center;
-  padding: 50px;
-}
-
-main {
-  grid-area: main;
-  flex: 1;
-  padding: 20px;
-  text-align: center;
-}
-main h1 {
-  font-size: 2em;
-  margin: 20px 0;
-  text-transform: uppercase;
-}
-
-.logo {
+.container .logo {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
-.logo img {
+.container .logo img {
   border-radius: 50%;
 }
-
-.Titulo h1 {
+.container .Titulo h1 {
   text-align: center;
   font-size: 40px;
   color: #ffffff;
 }
-.Titulo h2 {
+.container .Titulo h2 {
   text-align: center;
   font-size: 30px;
   color: #ffffff;
 }
-
-.titulo {
+.container .footer {
+  margin-top: auto;
   text-align: center;
-  color: #ffffff;
-  font-size: 30px;
 }
 
-.parrafos p {
-  text-align: left;
-  margin: 10px auto;
-  max-width: 800px;
-  line-height: 1.6;
-  color: #ffffff;
-}
-
-.areas_container {
+main .areas_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px;
 }
-.areas_container .tile_areas {
+main .areas_container .tile_areas {
   text-align: center;
-  font-size: 30px;
-  color: #ffffff;
   font-size: 40px;
+  color: #ffffff;
 }
-.areas_container .area1, .areas_container .area2, .areas_container .area3, .areas_container .area4 {
+main .areas_container .content {
+  color: black;
+  text-align: center;
+  padding: 50px;
+}
+main .areas_container .area1, main .areas_container .area2, main .areas_container .area3, main .areas_container .area4 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,11 +75,34 @@ main h1 {
   margin-bottom: 20px;
   background-color: #f9f9f9;
 }
-.areas_container .area1 img, .areas_container .area2 img, .areas_container .area3 img, .areas_container .area4 img {
+main .areas_container .area1 img, main .areas_container .area2 img, main .areas_container .area3 img, main .areas_container .area4 img {
   width: 40%;
   max-width: 150px;
   height: auto;
   border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+main .titulo {
+  color: #ffffff;
+  font-size: 30px;
+  grid-area: main;
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+main .parrafos p {
+  text-align: left;
+  margin: 10px auto;
+  max-width: 800px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+main h1 {
+  font-size: 2em;
+  margin: 20px 0;
+  text-transform: uppercase;
 }
 
 .mapa {
@@ -121,24 +122,27 @@ main h1 {
 .footer {
   grid-area: footer;
   background-color: #787373;
-  color: #fff;
+  color: #ffffff;
   padding: 30px 20px;
   text-align: center;
 }
-.footer h5 {
+
+h5 {
   margin: 5px 0;
 }
-.footer .social-icons {
+
+.social-icons {
   display: flex;
   justify-content: center;
   margin: 10px 0;
 }
-.footer .social-icons img {
+.social-icons img {
   width: 30px;
   height: 30px;
   margin: 0 10px;
 }
-.footer p {
+
+p {
   margin-top: 10px;
   font-size: 14px;
 }

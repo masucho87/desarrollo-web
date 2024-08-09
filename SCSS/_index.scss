@@ -1,0 +1,35 @@
+.container {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    .logo {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .Titulo {
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            color: $color;
+        }
+    
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            color: $color;
+        }
+    }
+    
+    .footer {
+        margin-top: auto;
+        text-align: center;
+    }
+}

@@ -1,0 +1,15 @@
+.mapa {
+    display: flex;
+    align-items: flex-start;
+
+    .iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        display: flex;
+        color: $color;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,44 @@
+main {
+    .areas_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+
+        .tile_areas {
+            text-align: center;
+            font-size: 40px;
+            color: $color;  // Asegúrate de que $color esté definido en otro lugar
+        }
+
+        .content {
+            color: black;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .area1, .area2, .area3, .area4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+
+            img {
+                width: 40%;
+                max-width: 150px;
+                height: auto;
+                border-radius: 10px;
+                display: block;
+                margin: 0 auto;  // Esto centra la imagen horizontalmente
+            }
+
+        }
+    }
+}

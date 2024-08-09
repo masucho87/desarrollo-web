@@ -1,0 +1,23 @@
+main{
+    .titulo {
+        color: $color;
+        font-size: 30px;
+        grid-area: main;
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+    }
+    .parrafos p{
+    text-align: left;
+    margin: 10px auto;
+    max-width: 800px;
+    line-height: 1.6;
+    color: $color;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: 20px 0;
+        text-transform: uppercase;
+    }
+}
