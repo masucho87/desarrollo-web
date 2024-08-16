@@ -1,35 +1,52 @@
+
+@keyframes cambioDeColor {
+0% {
+    opacity: 0;
+    color: #4c5e5f; /* Color inicial */
+    transform: scale(0.9);
+}
+    100% {
+    opacity: 1;
+    color: rgb(13, 12, 12); /* Color final */
+    transform: scale(1);
+}
+}
+
 .container {
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.logo {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    img {
+    border-radius: 50%;
     }
-    
-    .logo {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        img {
-            border-radius: 50%;
-        }
+}
+
+.Titulo {
+    h1 {
+    text-align: center;
+    font-size: 40px;
+    color: $color;
+    animation: cambioDeColor 2s ease-in-out; 
     }
 
-    .Titulo {
-        h1 {
-            text-align: center;
-            font-size: 40px;
-            color: $color;
-        }
-    
-        h2 {
-            text-align: center;
-            font-size: 30px;
-            color: $color;
-        }
+    h2 {
+    text-align: center;
+    font-size: 30px;
+    color: $color;
+    animation: cambioDeColor 2s ease-in-out; 
     }
-    
-    .footer {
-        margin-top: auto;
-        text-align: center;
-    }
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+}
 }
