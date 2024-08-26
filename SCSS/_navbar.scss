@@ -1,0 +1,68 @@
+.navbar {
+    background-color: #343a40; /* Color de fondo oscuro */
+    font-family: 'Poppins', sans-serif;
+
+    .navbar-brand {
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #cccccc;
+        }
+    }
+
+    .nav-link {
+        color: #ffffff;
+        font-weight: 500;
+        margin-left: 15px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #cccccc;
+        }
+
+        &.active {
+            color: #ffffff;
+            font-weight: 700;
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: #ffffff;
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        background-color: #ffffff;
+        color: #343a40;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #cccccc;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+        }
+    }
+
+    .navbar-collapse {
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            justify-content: flex-end;
+        }
+    }
+}

@@ -18,6 +18,66 @@ body {
   background-attachment: fixed;
 }
 
+.navbar {
+  background-color: #343a40; /* Color de fondo oscuro */
+  font-family: "Poppins", sans-serif;
+}
+.navbar .navbar-brand {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+.navbar .navbar-brand:hover {
+  color: #cccccc;
+}
+.navbar .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+.navbar .nav-link:hover {
+  color: #cccccc;
+}
+.navbar .nav-link.active {
+  color: #ffffff;
+  font-weight: 700;
+  position: relative;
+}
+.navbar .nav-link.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+.navbar .navbar-toggler {
+  border: none;
+  background-color: #ffffff;
+  color: #343a40;
+  transition: background-color 0.3s ease;
+}
+.navbar .navbar-toggler:hover {
+  background-color: #cccccc;
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+.navbar .navbar-collapse {
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .navbar .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
+
 @keyframes cambioDeColor {
   0% {
     opacity: 0;
@@ -30,6 +90,16 @@ body {
     transform: scale(1);
   }
 }
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1;
+}
+
 .container .wrapper {
   display: flex;
   flex-direction: column;
@@ -115,12 +185,11 @@ main .titulo {
   padding: 20px;
   text-align: center;
 }
-main .parrafos p {
-  text-align: left;
-  margin: 10px auto;
-  max-width: 800px;
-  line-height: 1.6;
-  color: #ffffff;
+main .parrafos {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 main h1 {
   font-size: 2em;
@@ -143,31 +212,31 @@ main h1 {
 }
 
 .footer {
-  grid-area: footer;
-  background-color: #787373;
-  color: #ffffff;
-  padding: 30px 20px;
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
 }
-
-h5 {
-  margin: 5px 0;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
+.footer h5 {
   margin: 10px 0;
 }
-.social-icons img {
-  width: 30px;
-  height: 30px;
+.footer .social-icons {
+  margin-top: 15px;
+}
+.footer .social-icons a {
   margin: 0 10px;
 }
-
-p {
-  margin-top: 10px;
+.footer .social-icons a img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.footer .social-icons a:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.footer p {
+  margin-top: 20px;
   font-size: 14px;
+  color: #bbb;
 }
 
 @media screen and (max-width: 768px) {
