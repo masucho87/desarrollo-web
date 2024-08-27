@@ -1,53 +1,59 @@
-.areas_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    padding: 20px;
-    
-    .area {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        max-width: 500px;
+main{
+    h1{
+        color: #ddd;
+    }
+    .areas_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
         padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-        background-color: #f9f9f9;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-        h2 {
-            text-align: center;
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .content {
-            display: none;
-            text-align: center;
+        
+        .area {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
             padding: 20px;
-
-            img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 8px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+            h2 {
+                text-align: center;
+                font-size: 24px;
+                color: #333;
+                margin-bottom: 10px;
             }
-
-            .text-container {
-                color: black;
-            }
-        }
-
-        &:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-
+    
             .content {
-                display: block;
+                display: none;
+                text-align: center;
+                padding: 20px;
+    
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+    
+                .text-container {
+                    color: black;
+                }
+            }
+    
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+                .content {
+                    display: block;
+                }
             }
         }
     }
+
 }
